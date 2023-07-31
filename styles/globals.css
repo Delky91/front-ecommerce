@@ -4,6 +4,7 @@
 }
 body {
 	font-family: "Roboto", "sans-serif";
+	scroll-behavior: smooth;
 }
 
 header {
@@ -30,9 +31,25 @@ header .container {
 	padding: 1.2rem 0;
 }
 
+button {
+	cursor: pointer;
+}
+
 .container {
 	max-width: 95%;
 	margin: 0 auto;
+}
+
+.primary-btn {
+	background-color: #5542f6;
+	border: none;
+	color: white;
+	border-radius: 5px;
+}
+
+.icon {
+	width: 1.25rem;
+	height: 1.25rem;
 }
 
 @media (min-width: 760px) {
