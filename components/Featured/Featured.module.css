@@ -7,7 +7,7 @@
 .text_container > h1 {
 	font-weight: normal;
 	margin-bottom: 1.2rem;
-	font-size: 1.8rem;
+	font-size: 3rem;
 }
 
 .text_container > p {
@@ -37,17 +37,17 @@
 
 .img_container > img {
 	max-width: 100%;
-	max-height: 400px;
+	max-height: 25rem;
 }
 
 .button_container {
-	margin-top: 10px;
+	margin-top: 1.56rem;
 	display: flex;
-	gap: 10px;
+	gap: 0.625rem;
 }
 
 .button_container > :first-child {
-	padding: 9px 10px;
+	padding: 0.56rem 0.625rem;
 	border: 1px solid #fff;
 	border-radius: 5px;
 	background-color: transparent;
@@ -55,11 +55,11 @@
 }
 
 .button_container > .toCart {
-	padding: 7px 14px;
+	padding: 0.5rem 1rem;
 	font-size: 1rem;
 	display: inline-flex;
 	align-items: center;
-	gap: 5px;
+	gap: 0.3rem;
 }
 
 .toCart > svg {
