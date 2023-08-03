@@ -33,7 +33,7 @@ export default function Featured({ product }) {
 				</div>
 				<div className={styles.img_container}>
 					<img
-						src='https://lomb-next-ecommerce.s3.us-east-2.amazonaws.com/1688201401449.webp'
+						src={product.images[0]}
 						alt='poner codigo del titulo producto destacado'
 					/>
 				</div>
