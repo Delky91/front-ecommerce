@@ -5,6 +5,8 @@ import { Product } from "@/models/Product";
 import Head from "next/head";
 
 export default function Home({ product }) {
+	console.log(product);
+
 	return (
 		<>
 			<Head>
@@ -28,7 +30,7 @@ export default function Home({ product }) {
 			</Head>
 
 			<Header />
-			<Featured />
+			<Featured product={product} />
 		</>
 	);
 }
@@ -38,6 +40,7 @@ export async function getServerSideProps() {
 	await mongooseConnect();
 	const featuredProduct = await Product.findById(featuredProductId);
 	return {
-		props: { product: JSON.stringify(featuredProduct) },
+		//the mongoDB object need to be parse for us to use so we need to parse it back when we get the object
+		props: { product: JSON.parse(JSON.stringify(featuredProduct)) },
 	};
 }

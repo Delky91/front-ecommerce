@@ -1,21 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "./Featured.module.css";
+import Link from "next/link";
 
-export default function Featured() {
+export default function Featured({ product }) {
 	return (
 		<section className={styles.featured}>
-			<div className={"container " + styles.feat_grid}>
+			<div className={styles.feat_grid}>
 				<div className={styles.col_a}>
 					<div className={styles.text_container}>
-						<h1>Pro anywhere</h1>
+						<h1>{product.title}</h1>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum atque
-							consectetur, reprehenderit laudantium quod doloribus asperiores eaque
-							maiores exercitationem vitae. Voluptatibus reiciendis hic quibusdam ipsum
-							modi laudantium commodi eos sed.
+							{product.description} Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Iure sequi ipsum voluptas quidem, tempore, quisquam eius mollitia
+							aliquid similique quae neque sit laborum at facilis. Eius minima
+							repellendus temporibus sit?
 						</p>
 						<div className={styles.button_container}>
-							<button>Read more</button>
+							{/* need to put the code to the route of the object */}
+							<Link href={"/product/" + product._id}>Read More</Link>
 							<button className={styles.toCart + " primary-btn"}>
 								<svg
 									xmlns='http://www.w3.org/2000/svg'
