@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from "./ProductCard.module.css";
 import Image from "next/image";
+import CartIcon from "../icons/CartIcon";
 
 export default function ProductCard({ product }) {
 	const { title, _id, price, description, images } = product;
@@ -14,8 +14,13 @@ export default function ProductCard({ product }) {
 					height={200}
 				/>
 			</div>
-			<div>{title}</div>
-			<div>{description}</div>
+			<h2 className={styles.title}>{title}</h2>
+			<div>
+				<button className={styles.toCart + " primary-btn"}>
+					<CartIcon />
+					Add to
+				</button>
+			</div>
 			<div>{price}</div>
 		</div>
 	);
