@@ -1,8 +1,36 @@
 .newProduct {
-	width: 90%;
-	margin: 3rem auto;
+	background-color: #d1d1d1;
 }
 
 .grid {
 	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	width: 90%;
+	margin: 0 auto;
+	gap: 1.2rem;
+	padding: 3rem 0;
+}
+
+@media (max-width: 575px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }

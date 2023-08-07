@@ -1,0 +1,13 @@
+.card {
+	padding: 20px;
+}
+
+.img_container {
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+.img_container > img {
+	display: block;
+	object-fit: cover;
+}
