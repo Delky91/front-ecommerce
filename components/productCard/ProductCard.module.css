@@ -1,23 +1,22 @@
 .card {
 	padding: 20px;
+	max-width: 300px;
 }
 
 .img_container {
 	background-color: #fff;
 	border-radius: 14px;
-	max-width: 300px;
-	max-height: 200px;
-	overflow: hidden;
+	max-width: 100%;
 }
 
-.img_container > img {
+/* .img_container > img {
 	display: block;
 	object-fit: cover;
-}
+} */
 
 .title {
 	font-weight: normal;
-	font-size: 1.4rem;
+	font-size: 1.7rem;
 }
 
 .toCart {
@@ -26,4 +25,54 @@
 	display: inline-flex;
 	align-items: center;
 	gap: 0.3rem;
+}
+
+.productInfo {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	justify-content: space-between;
+}
+
+.priceTag {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+/* BREAK POINTS  */
+
+@media screen and (max-width: 400px) {
+	.card {
+		max-width: 300px;
+	}
+	.img_container {
+		max-width: 300px;
+	}
+}
+
+@media (max-width: 575px) {
+	.card {
+		max-width: 90%;
+	}
+	.img_container {
+		max-width: 400px;
+	}
+}
+
+@media (min-width: 720px) and (max-width:1200px) {
+	.card {
+		width: 300px;
+	}
+}
+
+@media (min-width: 768px) {
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: 1200px) {
+	.grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }

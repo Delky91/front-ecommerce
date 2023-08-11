@@ -8,20 +8,24 @@ export default function ProductCard({ product }) {
 		<div className={styles.card}>
 			<div className={styles.img_container}>
 				<Image
-					src={product.images[0]}
-					alt=''
-					width={300}
-					height={200}
+					src={images[0]}
+					alt={title}
+					width={1200}
+					height={800}
+					style={{
+						maxWidth: "100%",
+						height: "auto",
+					}}
 				/>
 			</div>
 			<h2 className={styles.title}>{title}</h2>
-			<div>
+			<div className={styles.productInfo}>
+				<p className={styles.priceTag}>$ {price}</p>
 				<button className={styles.toCart + " primary-btn"}>
 					<CartIcon />
-					Add to
+					Add
 				</button>
 			</div>
-			<div>{price}</div>
 		</div>
 	);
 }

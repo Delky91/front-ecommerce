@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import CartIcon from "../icons/CartIcon";
 import styles from "./Featured.module.css";
 import Link from "next/link";
@@ -27,9 +27,16 @@ export default function Featured({ product }) {
 					</div>
 				</div>
 				<div className={styles.img_container}>
-					<img
+					<Image
 						src={product.images[0]}
-						alt='poner codigo del titulo producto destacado'
+						width={1200}
+						height={800}
+						alt={product.title}
+						priority={true}
+						style={{
+							maxWidth: "100%",
+							height: "auto",
+						}}
 					/>
 				</div>
 			</div>
