@@ -21,9 +21,9 @@ export default function ProductCard({ product }) {
 			<h2 className={styles.title}>{title}</h2>
 			<div className={styles.productInfo}>
 				<p className={styles.priceTag}>$ {price}</p>
-				<button className={styles.toCart + " primary-btn"}>
+				<button className={styles.toCart + " primary-btn-outline"}>
 					<CartIcon />
-					Add
+					<p className={styles.btnText}>Add</p>
 				</button>
 			</div>
 		</div>

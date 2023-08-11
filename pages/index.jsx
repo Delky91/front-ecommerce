@@ -20,12 +20,13 @@ export default function Home({ featuredProduct, newProducts }) {
 				/>
 				<meta
 					name='author'
-					content='Luis Miño bustos'
+					content='Luis Miño Bustos'
 				/>
 				<link
 					rel='icon'
 					href='/favicon.ico'
 				/>
+				
 			</Head>
 
 			{/* main body of the app */}
